@@ -1,0 +1,14 @@
+FROM  nginx:alpine
+WORKDIR /app
+
+COPY . /app/
+
+RUN ls -la /app/
+
+# RUN index.nginx-debian.html
+CMD ["nginx", "-g", "daemon off;"]
+
+# docker build -t dockerfile-aa .
+# docker run -d -p 8080:80 aa-static-web
+
+
